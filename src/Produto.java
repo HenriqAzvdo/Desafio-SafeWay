@@ -17,9 +17,7 @@ public class Produto {
 
 	public Produto() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	
 	
 
 	public Integer getId() {
@@ -49,9 +47,9 @@ public class Produto {
 	public Integer getQuantidade() {
 		return quantidade;
 	}
-
+//teste
 	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
+		this.quantidade -= quantidade;
 	}
 
 	public Double getPreco() {
@@ -60,6 +58,15 @@ public class Produto {
 
 	public void setPreco(Double preco) {
 		this.preco = preco;
+	}
+
+	@Override
+	public String toString() {
+		return id 
+			+ " - " 
+			+ nome 
+			+ "    R$" 
+			+ String.format("%.2f", preco);
 	}
 
 }
